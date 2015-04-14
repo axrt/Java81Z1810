@@ -4,7 +4,6 @@ import org.junit.Test;
 import static java.lang.System.out;
 import java.time.LocalDate;
 import java.time.Month;
-import java.time.Year;
 
 /**
  * Created by alext on 4/14/15.
@@ -18,7 +17,13 @@ public class LocalDateTest {
     @Test
     public void test(){
 
+        //From system clock
+        final LocalDate systemDate=LocalDate.now();
+        //Or manually
         final LocalDate localDate = LocalDate.of(2015,4,14);
+        //Or parse from a string
+        final LocalDate parseDate = LocalDate.parse("2015-04-14");
+
         //Is the year leap year?
         out.println("Year is leap: "+localDate.isLeapYear());
         out.println("Year: "+localDate.getYear());
